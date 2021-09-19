@@ -472,9 +472,8 @@ html {
   display: inline-flex !important;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 21vh;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   background-size: cover;
 }
 .main-section-visual .visual-content1 {
@@ -541,12 +540,13 @@ html {
   height: 1px;
   background: #ffffff;
   transform: translateY(0);
+  transition: transform .2s;
 }
 .slick-dots li button:before {
   content: none;
 }
 .slick-dots li.slick-active button {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   height: 4px;
   background: #f37342;
 }

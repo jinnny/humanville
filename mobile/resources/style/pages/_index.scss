@@ -36,9 +36,8 @@
     display: inline-flex !important;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 21vh;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 100%;
     background-size: cover;
     &1 {
       background-image: url('../img/main/slide1-img.png');
@@ -102,13 +101,14 @@
       height: 1px;
       background: $white;
       transform: translateY(0);
+      transition: transform .2s;
       &:before {
         content: none;
       }
     }
     &.slick-active {
       button {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
         height: 4px;
         background: $point2;
       }
