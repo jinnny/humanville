@@ -476,7 +476,7 @@ html {
 
 .slick-control-area {
   position: absolute;
-  top: 508px;
+  top: 525px;
   left: 0;
 }
 .slick-control-area .controller-progress-bar {
@@ -601,7 +601,7 @@ html {
 .main-slide-text {
   color: #ffffff;
   position: absolute;
-  top: 350px;
+  top: 370px;
   left: 16%;
 }
 .main-slide-text .main-slide__label {
@@ -631,7 +631,7 @@ html {
 .customer__link {
   position: absolute;
   left: 0;
-  bottom: 170px;
+  bottom: 64px;
   z-index: 1;
 }
 
