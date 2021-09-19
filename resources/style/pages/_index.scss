@@ -1,25 +1,5 @@
 .main-section-area {
   width: 100%;
-  .slick-arrow {
-    position: absolute;
-    left: 0;
-    top: 23px;
-    display: block;
-    width: 45px;
-    height: 55px;
-    text-indent: -9999px;
-    cursor: pointer;
-  }
-
-  .slick-prev {
-    background: url('../img/main/dg_premium_prev.png') 50% 50% no-repeat;
-  }
-
-  .slick-next {
-    left: auto;
-    right: 0;
-    background: url('../img/main/dg_premium_next.png') 50% 50% no-repeat;
-  }
 }
 .main-copyright {
   &-area {

@@ -367,24 +367,6 @@ html {
 .main-section-area {
   width: 100%;
 }
-.main-section-area .slick-arrow {
-  position: absolute;
-  left: 0;
-  top: 23px;
-  display: block;
-  width: 45px;
-  height: 55px;
-  text-indent: -9999px;
-  cursor: pointer;
-}
-.main-section-area .slick-prev {
-  background: url("../img/main/dg_premium_prev.png") 50% 50% no-repeat;
-}
-.main-section-area .slick-next {
-  left: auto;
-  right: 0;
-  background: url("../img/main/dg_premium_next.png") 50% 50% no-repeat;
-}
 
 .main-copyright-area {
   width: 422px;
