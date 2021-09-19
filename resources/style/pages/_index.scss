@@ -44,7 +44,7 @@
 }
 .slick-control-area {
   position: absolute;
-  top: 525px;
+  top: 508px;
   left: 0;
   .controller-progress-bar {
     left: 0;
@@ -171,7 +171,7 @@
   &-text {
     color: $white;
     position: absolute;
-    top: 380px;
+    top: 350px;
     left: 16%;
     .main-slide {
       &__label {
@@ -188,7 +188,7 @@
         margin: 32px 0 50px;
         &-impact {
           color: $point;
-          font-weight: 700;
+          font-weight: 600;
         }
       }
       &__description {
