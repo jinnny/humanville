@@ -1,86 +1,56 @@
 $(function() {
+  var mainSlide = function() {
+    var $slick_main_ele = $('.main-slide')
+    var $slick_nav_ele = $('.main-slide-nav')
+    var $pagerProgressLine = $('.slick-control-area .controller-progress-line');
+    var $pagerCurrentText = $('.slick-control-area .controller__current');
+    var $pagerTotalText = $('.slick-control-area .controller__total');
 
-  var mainSlide = function(){
-    var $slick_ele1 = $('.main-visual-content');
-    var $pager = $('.main-visual-controller .visual-controller__item');
-    var $pagerProgressLine = $('.main-visual-controller .controller-progress-line');
-
-    $slick_ele1.on('init', function(slick){
-      _bgMotion(0);
+    $slick_main_ele.on('init', function(event, slick){
+      $pagerTotalText.text('0' + slick.slideCount);
+      $pagerProgressLine.addClass('is--active')
     });
 
-    $slick_ele1.slick({
-      infinite: true,
+    $slick_main_ele.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
       autoplay: true,
-      arrows:false,
-      autoplaySpeed: 2000,
-      speed: 2000,
-      fade:true,
-      dots: false,
-      focusOnSelect: false
-    });
-
-
-    $pager.on('click',function(){
-      var slideno = $(this).data('slide');
-      $slick_ele1.slick('slickGoTo', slideno);
-    });
-
-
-    $slick_ele1.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      _bgMotion(nextSlide);
-      $pagerProgressLine.css('height', ((nextSlide+1) * 33.33) + '%')
-      $pager.removeClass('on');
-      $pager.eq(nextSlide).addClass('on');
-    });
-
-    function _bgMotion(num){
-      var $nextLi = $slick_ele1.find('.slick-slide').eq(num);
-      TweenMax.set($('.main-text-img'), {autoAlpha:0, y:80});
-      TweenMax.set($('.main-label-img'), {autoAlpha:0, y:80});
-
-      TweenMax.to($nextLi.find('.main-text-img'), 1, {delay:.5, autoAlpha:1, y:0, ease:Power2.easeOut});
-      TweenMax.to($nextLi.find('.main-label-img'), 1, {delay:.3, autoAlpha:1, y:0, ease:Power2.easeOut});
-    }
-  }
-
-  var premiumSlide = function() {
-    var $premium_ele = $('.main-premium-slide');
-    var $pagerProgressLine = $('.main-premium .controller-progress-line');
-    var $pagerNumber1 = $('.main-premium .controller__number1');
-    var $pagerNumber3 = $('.main-premium .controller__number3');
-    $premium_ele.slick({
-      infinite: true,
-      autoplay: true,
-      arrows: true,
-      autoplaySpeed: 2500,
-      speed: 2500,
-      dots: false,
-      focusOnSelect: false,
+      autoplaySpeed: 4000,
+      asNavFor: '.main-slide-nav',
       draggable: false
     });
 
-    $premium_ele.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-      var active = nextSlide+1
-      $pagerProgressLine.css('width', (active * 33.33) + '%')
+    $slick_main_ele.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      $pagerProgressLine.removeClass('is--active')
+      $pagerCurrentText.text('0' + (nextSlide+1));
     });
 
-    $('.js-autoplay-control-button').on('click', function () {
-      if($(this).hasClass('autoplay-stop-icon')) {
-        $premium_ele.slick('slickPause');
-        $(this).addClass('is--hide')
-        $('.autoplay-play-icon').removeClass('is--hide')
-      }else {
-        $premium_ele.slick('slickPlay');
-        $(this).addClass('is--hide')
-        $('.autoplay-stop-icon').removeClass('is--hide')
-      }
+    $slick_main_ele.on('afterChange',function(){
+      $pagerProgressLine.addClass('is--active')
+    });
+
+    $slick_nav_ele.slick({
+      slidesToScroll: 1,
+      asNavFor: '.main-slide',
+      arrows: false,
+      initialSlide: 0,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      variableWidth: true,
+      dots: true,
+      focusOnSelect: true
+    });
+
+    $('.js-controller__button-prev').on('click', function (){
+      $slick_main_ele.slick('slickPrev')
+    })
+    $('.js-controller__button-next').on('click', function (){
+      $slick_main_ele.slick('slickNext')
     })
   }
 
-
   mainSlide()
-  premiumSlide()
 
   AOS.init({
     duration: 1000

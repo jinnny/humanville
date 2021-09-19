@@ -1,15 +1,7 @@
 .sub {
   &-layout {
-    padding: 0 59px;
-    background: #232323;
   }
   &-top {
-    &-area {
-      position: relative;
-      width: 100%;
-      padding-top: 177px;
-      box-sizing: border-box;
-    }
     &-content {
       display: flex;
       align-items: flex-end;
@@ -17,25 +9,15 @@
       justify-content: space-between;
       width: 1200px;
       margin: 0 auto;
-      .sub-top__title {
-        color: $white;
-        font-size: 50px;
-
-        div {
-          font-size: 50px;
-          letter-spacing: -1.2px;
-          font-weight: normal;
-        }
-      }
     }
 
     &-bg  {
-      margin-top: 30px;
       width: 100%;
-      height: 340px;
+      padding-top: 131px;
+      height: 488px;
       background-size: cover;
       z-index: 10;
-      background-image: url('../img/sub/dg_top_bg.png');
+      background-image: url('../img/sub/sub-top-bg.png');
       background-position: 50% 100%;
       background-repeat: no-repeat;
       display: flex;
@@ -44,13 +26,20 @@
       justify-content: center;
       text-align: center;
       color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
       .sub-top__description {
-        font-size: 20px;
+        font-size: 32px;
         font-weight: 400;
         letter-spacing: -0.5px;
         &--impact {
-          margin-top: 25px;
-          font-size: 40px;
+          margin-top: 6px;
+          display: block;
+          font-size: 46px;
+          color: #b7aa00;
+          font-weight: bold;
         }
       }
     }
@@ -58,20 +47,21 @@
 
   .sub-top {
     &-menu {
+      position: absolute;
+      right: 0;
+      top: 488px;
       z-index: 11;
       height: 58px;
       display: flex;
       align-items: center;
       opacity: 0;
-      padding-right: 2.5%;
-      padding-left: 19%;
       box-sizing: border-box;
       justify-content: space-between;
 
       &__item {
         letter-spacing: -0.5px;
         font-size: 16px;
-        color: #000000;
+        color: $black;
 
         & + .sub-top-menu__item {
           &:before {
@@ -98,7 +88,7 @@
             width: 32px;
             height: 48px;
             margin-right: 20px;
-            background: url('../img/sub/dg_icon_menu.png') no-repeat center;
+            background: url('../img/sub/icon-sub-menu.png') no-repeat center;
           }
           &__link {
             display: block;
@@ -110,10 +100,10 @@
           float: left;
           width: 220px;
           height: 48px;
-          background: url('../img/sub/dg_dropdown_arrow.png') no-repeat right 20px center;
+          background: url('../img/sub/sub-dropdown-arrow.png') no-repeat right 20px center;
           padding-left: 20px;
           font-size: 14px;
-          color: rgba(254,254,254,0.3);
+          color: #444444;
           box-sizing: border-box;
           position: relative;
           line-height: 48px;
@@ -124,7 +114,6 @@
             display: block;
             height: 12px;
             width: 1px;
-            opacity: 0.3;
             background-color: #d9d9d9;
             position: absolute;
             left: 0;
@@ -167,11 +156,18 @@
       }
     }
   }
+  .customer__link {
+    position: absolute;
+    left: 0;
+    top: 441px;
+    bottom: auto;
+    z-index: 10;
+  }
 }
 
 .sub-content-area {
   min-height: 300px;
-  padding: 120px 0 155px;
+  padding: 620px 0 155px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -179,10 +175,23 @@
 }
 
 .sub-content__title {
-  .sub-content-title-text {
-    font-size: 40px;
+  font-size: 26px;
+  letter-spacing: -1px;
+  color: $point2;
+  font-weight: normal;
+  &-english {
+    color: $point2;
+    font-family: $mont;
+    font-size: 48px;
     letter-spacing: -1.98px;
-    color: #273d6c;
+    div {
+      font: inherit;
+      color: inherit;
+    }
+  }
+  div {
+    font: inherit;
+    color: inherit;
   }
 }
 

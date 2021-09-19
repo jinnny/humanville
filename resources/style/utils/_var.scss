@@ -1,22 +1,10 @@
 $black: #000;
-$lBlack: #1a1818;
 $white: #ffffff;
-$navy: #3d4268;
-$grey: #464646;
-$lgrey: #a9a9a9;
-$red: #f74242;
-$border: #ccc;
-$green: #09a7b4;
-$point: #fd51cc;
-$lPoint: rgb(164, 147, 127);
-$darkPoint: #001740;
-$darkBlue: #003056;
-$blue: #093354;
-$navy-blue: #00183f;
+$point: #f37342;
+$point2: #1b4556;
 
-@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
 //font
-$korea: 'Noto Sans KR', sans-serif, 'Malgun Gothic', '맑은 고딕';
+$korea: 'NotoSansKR', sans-serif, 'Malgun Gothic', '맑은 고딕';
 
 $default-font: $korea, AppleSDGothicNeo, -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$trajan: 'TrajanPro', $korea
+$mont: 'Montserrat', $korea;

@@ -1,15 +1,21 @@
 var $title, $ele;
 var _init = function() {
-  $ele = $('.sub-top-area');
-  $title = $ele.find('.sub-top__title');
+  $ele = $('.sub-content-header');
+  $title = $ele.find('.sub-content__title');
+  $titleEng = $ele.find('.sub-content__title-english');
 
   var mySplitText = new SplitText($title, { type: "chars" });
   var shuffleCharArray = shuffleArray(mySplitText.chars);
+  var mySplitEng = new SplitText($titleEng, { type: "chars" });
+  var shuffleCharArrayEng = shuffleArray(mySplitEng.chars);
+
 
   TweenLite.set(shuffleCharArray, { autoAlpha: 0 });
+  TweenLite.set(shuffleCharArrayEng, { autoAlpha: 0 });
 
   tl = new TimelineLite();
-  tl.staggerTo(shuffleCharArray, .8, { delay: 1, autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
+  tl.staggerTo(shuffleCharArray, .8, { delay: 1.5, autoAlpha: 1, ease: Cubic.easeOut }, 0.2)
+  tl.staggerTo(shuffleCharArrayEng, .5, { delay: 0, autoAlpha: 1, ease: Cubic.easeOut }, 0.1)
   tl.play();
   tl.timeScale(1.5);
 
