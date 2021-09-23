@@ -36,20 +36,25 @@
     display: inline-flex !important;
     align-items: flex-start;
     justify-content: center;
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: cover;
     &1 {
-      background-image: url('../img/main/slide1-img.png');
+      .visual-content-bg {
+        background-image: url('../img/main/slide1-img.png');
+      }
     }
     &2 {
-      background-image: url('../img/main/slide2-img.png');
+      .visual-content-bg {
+        background-image: url('../img/main/slide2-img.png');
+      }
     }
     &3 {
-      background-image: url('../img/main/slide3-img.png');
+      .visual-content-bg {
+        background-image: url('../img/main/slide3-img.png');
+      }
     }
     &4 {
-      background-image: url('../img/main/slide4-img.png');
+      .visual-content-bg {
+        background-image: url('../img/main/slide4-img.png');
+      }
     }
     .main-text-img {
       position: absolute;
@@ -115,12 +120,49 @@
     }
   }
 }
+.main-section-visual {
+  .slick-slide {
+    .visual-content-bg {
+      -webkit-transform: scale(1.2, 1.2) rotate(0.002deg);
+      transform: scale(1.2, 1.2) rotate(0.002deg);
+      -webkit-transition: transform 4000ms ease-in-out;
+      -moz-transition: transform 4000ms ease-in-out;
+      -o-transition: transform 4000ms ease-in-out;
+      transition: transform 4000ms ease-in-out;
+    }
+    &.zoom-out {
+      .visual-content-bg {
+        -webkit-transform: scale(1.01, 1.01) rotate(0.002deg);
+        transform: scale(1.01, 1.01) rotate(0.002deg);
+      }
+    }
+  }
+  .visual-content-bg {
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/main/main-slide1-img.png");
+    &2 {
+      background-image: url("../img/main/main-slide2-img.png");
+    }
+    &3 {
+      background-image: url("../img/main/main-slide3-img.png");
+    }
+    &4 {
+      background-image: url("../img/main/main-slide4-img.png");
+    }
+  }
+}
+
 .main-slide {
   &-text {
     color: $white;
     position: absolute;
     top: 21vh;
     left: 5.5%;
+    z-index: 1;
     .main-slide {
       &__label {
         font-size: 12px;

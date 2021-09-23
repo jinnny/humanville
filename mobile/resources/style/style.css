@@ -538,20 +538,17 @@ html {
   display: inline-flex !important;
   align-items: flex-start;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: cover;
 }
-.main-section-visual .visual-content1 {
+.main-section-visual .visual-content1 .visual-content-bg {
   background-image: url("../img/main/slide1-img.png");
 }
-.main-section-visual .visual-content2 {
+.main-section-visual .visual-content2 .visual-content-bg {
   background-image: url("../img/main/slide2-img.png");
 }
-.main-section-visual .visual-content3 {
+.main-section-visual .visual-content3 .visual-content-bg {
   background-image: url("../img/main/slide3-img.png");
 }
-.main-section-visual .visual-content4 {
+.main-section-visual .visual-content4 .visual-content-bg {
   background-image: url("../img/main/slide4-img.png");
 }
 .main-section-visual .visual-content .main-text-img {
@@ -617,11 +614,42 @@ html {
   background: #f37342;
 }
 
+.main-section-visual .slick-slide .visual-content-bg {
+  -webkit-transform: scale(1.2, 1.2) rotate(0.002deg);
+  transform: scale(1.2, 1.2) rotate(0.002deg);
+  -webkit-transition: transform 4000ms ease-in-out;
+  -moz-transition: transform 4000ms ease-in-out;
+  -o-transition: transform 4000ms ease-in-out;
+  transition: transform 4000ms ease-in-out;
+}
+.main-section-visual .slick-slide.zoom-out .visual-content-bg {
+  -webkit-transform: scale(1.01, 1.01) rotate(0.002deg);
+  transform: scale(1.01, 1.01) rotate(0.002deg);
+}
+.main-section-visual .visual-content-bg {
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/main/main-slide1-img.png");
+}
+.main-section-visual .visual-content-bg2 {
+  background-image: url("../img/main/main-slide2-img.png");
+}
+.main-section-visual .visual-content-bg3 {
+  background-image: url("../img/main/main-slide3-img.png");
+}
+.main-section-visual .visual-content-bg4 {
+  background-image: url("../img/main/main-slide4-img.png");
+}
+
 .main-slide-text {
   color: #ffffff;
   position: absolute;
   top: 21vh;
   left: 5.5%;
+  z-index: 1;
 }
 .main-slide-text .main-slide__label {
   font-size: 12px;
