@@ -80,6 +80,9 @@
       box-sizing: border-box;
       position: relative;
       font-weight: normal;
+      &:hover {
+        color: #eb713e;
+      }
       &.disabled {
         opacity: .4;
       }

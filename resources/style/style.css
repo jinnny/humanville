@@ -244,6 +244,9 @@ table {
   position: relative;
   font-weight: normal;
 }
+.header-menu .header-menu__link:hover {
+  color: #eb713e;
+}
 .header-menu .header-menu__link.disabled {
   opacity: .4;
 }
