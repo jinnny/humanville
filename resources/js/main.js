@@ -7,6 +7,7 @@ $(function() {
     var $pagerTotalText = $('.slick-control-area .controller__total');
 
     $slick_main_ele.on('init', function(event, slick){
+      $('.main-slide .slick-slide').eq(0).addClass('zoom-out')
       $pagerTotalText.text('0' + slick.slideCount);
       $pagerProgressLine.addClass('is--active')
     });
@@ -24,6 +25,8 @@ $(function() {
 
     $slick_main_ele.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
       $pagerProgressLine.removeClass('is--active')
+      $('.main-slide .slick-slide').removeClass('zoom-out')
+      $('.main-slide .slick-slide').eq(nextSlide).addClass('zoom-out')
       $pagerCurrentText.text('0' + (nextSlide+1));
     });
 
@@ -35,7 +38,6 @@ $(function() {
       slidesToScroll: 1,
       asNavFor: '.main-slide',
       arrows: false,
-      initialSlide: 0,
       autoplay: true,
       autoplaySpeed: 4000,
       variableWidth: true,

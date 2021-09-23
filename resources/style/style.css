@@ -525,6 +525,18 @@ html {
     width: 100%;
   }
 }
+.main-slide .slick-slide .main-slide-bg {
+  -webkit-transform: scale(1.2, 1.2) rotate(0.002deg);
+  transform: scale(1.2, 1.2) rotate(0.002deg);
+  -webkit-transition: transform 4000ms ease-in-out;
+  -moz-transition: transform 4000ms ease-in-out;
+  -o-transition: transform 4000ms ease-in-out;
+  transition: transform 4000ms ease-in-out;
+}
+.main-slide .slick-slide.zoom-out .main-slide-bg {
+  -webkit-transform: scale(1.01, 1.01) rotate(0.002deg);
+  transform: scale(1.01, 1.01) rotate(0.002deg);
+}
 .main-slide__item {
   height: 100vh;
   position: relative;
@@ -603,6 +615,7 @@ html {
   position: absolute;
   top: 370px;
   left: 16%;
+  z-index: 1;
 }
 .main-slide-text .main-slide__label {
   font-size: 17px;

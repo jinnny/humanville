@@ -11,8 +11,7 @@ $(function() {
     $slick_ele1.slick({
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 2000,
-      speed: 2000,
+      autoplaySpeed: 4000,
       fade:true,
       dots: true,
       pauseOnFocus: false
